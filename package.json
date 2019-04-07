@@ -1,0 +1,32 @@
+{
+  "name": "is-equivalent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm-run-all -p build-*",
+    "build-browser": "webpack --mode production --env.isBrowser",
+    "build-umd": "webpack --mode production --env.isImport",
+    "start": "webpack-dev-server --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryo-kagawa/is-equivalent.git"
+  },
+  "author": "ryo-kagawa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryo-kagawa/is-equivalent/issues"
+  },
+  "homepage": "https://github.com/ryo-kagawa/is-equivalent#readme",
+  "devDependencies": {
+    "@babel/cli": "7.4.3",
+    "@babel/core": "7.4.3",
+    "@babel/preset-env": "7.4.3",
+    "@babel/runtime-corejs3": "7.4.3",
+    "babel-loader": "8.0.5",
+    "html-webpack-plugin": "3.2.0",
+    "webpack": "4.29.6",
+    "webpack-cli": "3.3.0",
+    "webpack-dev-server": "3.2.1"
+  }
+}
