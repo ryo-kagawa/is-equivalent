@@ -17,6 +17,7 @@ test({a: 1, test: 1}, {b: 1, test: 1}, {test: true}, undefined, true);
 test({a: 1, test: {test_1: 1, test_2: 1}}, {b: 1, test: {test_1: 1, test_2: 2}}, {test: {test_1: true}}, undefined, true);
 test({test_1: {test_1_1: 1, test_1_2: 2}, test_2: {test_2: 1}}, {test_1: {test_1_1: 1, test_1_2: 2}, test_2: {test_2: 2}}, {test_1: true}, undefined, true);
 test({test: 1}, {test: "1"}, {test: true}, undefined, false);
+test([{a: 1, test: 2}], [{b: 1, test: 2}], {test: true}), undefined, undefined, true);
 test({test: 1}, {test: "1"}, {test: function(a, b) {return a == b}}, undefined, true);
 test({test: function() {return 1;}}, {test: function() {return 2;}}, undefined, {isEquivalent: true}, false);
 test({}, {test: 1}, undefined, undefined, false);
