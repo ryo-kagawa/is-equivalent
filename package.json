@@ -15,9 +15,9 @@
   "author": "ryo-kagawa",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ryo-kagawa/is-equivalent/issues"
+    "url": "https://github.com/ryo-kagawa/is-equivalent.js/issues"
   },
-  "homepage": "https://github.com/ryo-kagawa/is-equivalent#readme",
+  "homepage": "https://github.com/ryo-kagawa/is-equivalent.js#readme",
   "devDependencies": {
     "@babel/cli": "7.4.3",
     "@babel/core": "7.4.3",
