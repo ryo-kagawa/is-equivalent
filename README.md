@@ -2,19 +2,21 @@
 
 > オブジェクト同士の比較を行うライブラリです
 
-このREADMEはv1.0.3の内容です
+このREADMEはv2.0.xの内容です
+
+# v1.x系には致命的なバグが存在しており正常に判定できていませんでしたので使用しないでください
 
 JavaScriptでは通常オブジェクト同士の比較では同一オブジェクトでない限りfalseとなってしまいます  
 本当に欲しいのは同じ内容であった場合にtrueが返って欲しいです  
 これを解消するためのライブラリです
 
-引数は4つです  
+引数は4つです
 * 第一引数：比較するオブジェクトその1  
 * 第二引数：比較するオブジェクトその2  
 * 第三引数：比較するパラメーターを指定するオブジェクト（指定しなくてもかまいません）  
 * 第四引数：オプション（指定しなくてもかまいません）
 
-対応ブラウザ  
+対応ブラウザ
 * Google Chrome：73以降  
 * Internet Explorer：11  
 * Microsoft Edge：18以降  
@@ -114,9 +116,8 @@ console.log(isEquivalent(a, b, compare)); // true
 ```
 
 # 第四引数について
-第四引数で指定するのはオプションです
-
-isCompareFunctionは関数の比較をするか指定するオプションです
+第四引数で指定するのはオプションです  
+isCompareFunctionは関数の比較をするか指定するオプションです  
 デフォルトはfalseが指定されています
 ```
 var a = {test: function() {return 1;}};
@@ -126,7 +127,7 @@ console.log(isEquivalent(a, b)); // true
 console.log(isEquivalent(a, b, undefined, option)); // false
 ```
 
-isJudgmentNoneParameterは存在しないパラメーターを比較する場合に何を返すべきか指定します
+isJudgmentNoneParameterは存在しないパラメーターを比較する場合に何を返すべきか指定します  
 デフォルトはfalseが指定されています
 ```
 var a = {};

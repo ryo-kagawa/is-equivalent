@@ -111,7 +111,9 @@ function _isEquivalent_Object(value1, value2, compare, option) {
       return option.isJudgmentNoneParameter;
     }
 
-    return hasPropertyValue1 && hasPropertyValue2 && _isEquivalent_main(value1[key], value2[key], compare[key], option);
+    if(!(hasPropertyValue1 && hasPropertyValue2 && _isEquivalent_main(value1[key], value2[key], compare[key], option))) {
+      return false;
+    }
   }
 
   return true;
