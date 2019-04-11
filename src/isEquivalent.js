@@ -77,7 +77,7 @@ function _isEquivalent_Array(value1, value2, compare, option) {
 }
 
 function _isEquivalent_Object(value1, value2, compare, option) {
-  if(compare === undefined) {
+  if(compare === undefined || compare === true) {
     const keys = _getObjectKeyList(value1);
     if(keys.length !== _getObjectKeyList(value2).length) {
       return false;

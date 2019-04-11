@@ -27,6 +27,10 @@ test({}, {test: 1}, undefined, {isJudgmentNoneParameter: true}, false);
 test({a: 0, b: 1}, {a: 0, b: 1}, {a: true, b: true}, undefined, true);
 test({a: 0, b: 1}, {a: 1, b: 1}, {a: true, b: true}, undefined, false);
 
+// 2.x系で発生していたネストしたオブジェクトで全判定する場合に常にtrueを返していた不具合確認用
+test({a: 1, test: {test_1: 1, test_2: 1}}, {b: 1, test: {test_1: 1, test_2: 1}}, {test: true}, undefined, true)
+test({a: 1, test: {test_1: 1, test_2: 1}}, {b: 1, test: {test_1: 1, test_2: 2}}, {test: true}, undefined, false)
+
 if(errorList.length === 0) {
   console.log("test count", count, "all test success");
 } else {
