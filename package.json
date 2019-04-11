@@ -1,6 +1,6 @@
 {
   "name": "@ryo-kagawa/is-equivalent.js",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "main": "index.js",
   "scripts": {
     "build": "npm-run-all -p build-*",
